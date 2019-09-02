@@ -1,5 +1,19 @@
 ## Designing Effective Inter-Pixel Information Flow for Natural Image Matting:
 Alphamatting is the problem of extracting the foreground from an image. Given the input of image and its corresponding, we try to extract the foreground from the background. Following is an example - 
+
+ <div class="row">
+  <div class="column">
+    <img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/img/net.png" alt="alt text" width="200" height="155">
+  </div>
+  <div class="column">
+    <img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/trimap/net.png" alt="alt text" width="200" height="155">
+  </div>
+  <div class="column">
+    <img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/Result/result_net.png" alt="alt text" width="200" height="155">
+  </div>
+</div> 
+
+
 <img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/img/net.png" alt="alt text" width="200" height="155">
 <img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/trimap/net.png" alt="alt text" width="200" height="155">
 <img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/Result/result_net.png" alt="alt text" width="200" height="155">
