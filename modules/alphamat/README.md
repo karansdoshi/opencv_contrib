@@ -1,6 +1,6 @@
 # Designing Effective Inter-Pixel Information Flow for Natural Image Matting:
 
-Alphamatting is the problem of extracting the foreground from an image. Given the input of image and its corresponding trimap, we try to extract the foreground from the background. Following is an example - 
+Alphamatting is the problem of extracting the foreground from an image. Given the input of image and its corresponding trimap, we try to extract the foreground from the background. Following is an example -
 
 Input Image                | Input trimap              | Ouput Alpha matte  
 :-------------------------:|:-------------------------:|:-------------------------:
@@ -45,8 +45,8 @@ Average time taken to compute the different flows is 40s, but solving of linear 
 
 ## TO DO
 
-* Results need to be improved by extensively comparing each flow's matrix with yaksoy MATLAB implementation [4]. 
-* Runtime needs improvement. 
+* Results need to be improved by extensively comparing each flow's matrix with yaksoy MATLAB implementation [4].
+* Runtime needs improvement.
 * Third part library(Eigen, nanoflann) dependencies can be removed.
 
 ## References
