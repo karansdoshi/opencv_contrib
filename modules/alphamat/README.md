@@ -1,9 +1,9 @@
 ## Designing Effective Inter-Pixel Information Flow for Natural Image Matting:
 Alphamatting is the problem of extracting the foreground from an image. Given the input of image and its corresponding, we try to extract the foreground from the background. Following is an example - 
 
-Input Image             | Input trimap | Ouput Alpha matte  
+Input Image                | Input trimap              | Ouput Alpha matte  
 :-------------------------:|:-------------------------:|:-------------------------:
-    <img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/img/net.png" alt="alt text" width="200" height="155"> | <img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/trimap/net.png" alt="alt text" width="200" height="155"> | <img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/Result/result_net.png" alt="alt text" width="200" height="155">
+<img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/img/net.png" alt="alt text" width="200" height="155"> | <img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/trimap/net.png" alt="alt text" width="200" height="155"> | <img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/Result/result_net.png" alt="alt text" width="200" height="155">
 
 
 This is a pixel-affinity based alpha matting algorithm which solves a linear system of equations using preconditioned conjugate gradient method. Affinity-based methods operate by propagating opacity information from known opacity regions(K) into unknown opacity regions(U) using a variety of affinity definitions mentioned as -
