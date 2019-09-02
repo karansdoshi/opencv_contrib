@@ -57,4 +57,4 @@ Average time taken to compute the different flows is 40s, but solving of linear 
 
 [3] Ehsan Shahrian, Deepu Rajan, Brian Price, Scott Cohen, "Improving Image Matting using Comprehensive Sampling Sets", CVPR 2013 [[paper](http://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Shahrian_Improving_Image_Matting_2013_CVPR_paper.pdf)]
 
-[4] Affinity Based Matting Toolbox by Yagiz Aksoy[[link]https://github.com/yaksoy/AffinityBasedMattingToolbox]
+[4] Affinity Based Matting Toolbox by Yagiz Aksoy[[link](https://github.com/yaksoy/AffinityBasedMattingToolbox)]
