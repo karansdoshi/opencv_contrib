@@ -26,7 +26,7 @@ To run the code -
 Sample image and trimap are in opencv_contrib/modules/alphamat/src/img and opencv_contrib/modules/alphamat/src/trimap
 
 ## Results
-----------
+
 Results for input_lowres are available here -
 https://docs.google.com/document/d/1BJG4633_U5K-Z0QLp3RTi43q25NI0hrTw-Q4w_85NrA/edit?usp=sharing
 
@@ -44,7 +44,7 @@ Input Image             | Ouput Alpha matte
 Average time taken to compute the different flows is 40s, but solving of linear equations using preconditioned conjugate gradient method takes another 2-3 min, which can be lessened by allowing lesser iterations.
 
 ## References
--------------
+
 [1] Yagiz Aksoy, Tunc Ozan Aydin, Marc Pollefeys, "Designing Effective Inter-Pixel Information Flow for Natural Image Matting", CVPR, 2017. [[link](http://people.inf.ethz.ch/aksoyy/ifm/)]
 
 [2] Roweis, Sam T., and Lawrence K. Saul. "Nonlinear dimensionality reduction by locally linear embedding." science 290.5500 (2000): 2323-2326.[[link](https://science.sciencemag.org/content/290/5500/2323)]
