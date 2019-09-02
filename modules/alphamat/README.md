@@ -34,4 +34,16 @@ Sample image and trimap are in opencv_contrib/modules/alphamat/src/img and openc
 Results for input_lowres are available here -
 https://docs.google.com/document/d/1BJG4633_U5K-Z0QLp3RTi43q25NI0hrTw-Q4w_85NrA/edit?usp=sharing
 
+Input Image             | Ouput Alpha matte 
+:-------------------------:|:-------------------------:
+<img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/img/net.png" alt="alt text" width="200" height="155">  |  <img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/Result/result_net.png" alt="alt text" width="200" height="155">
+<img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/img/doll.png" alt="alt text" width="200" height="155">  |  <img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/Result/result_doll.png" alt="alt text" width="200" height="155">
+<img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/img/donkey.png" alt="alt text" width="200" height="155">  |  <img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/Result/result_donkey.png" alt="alt text" width="200" height="155">
+<img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/img/elephant.png" alt="alt text" width="200" height="155">  |  <img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/Result/result_elephant.png" alt="alt text" width="200" height="155">
+<img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/img/pineapple.png" alt="alt text" width="200" height="155">  |  <img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/Result/result_pineapple.png" alt="alt text" width="200" height="155">
+<img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/img/plant.png" alt="alt text" width="200" height="155">  |  <img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/Result/result_plant.png" alt="alt text" width="200" height="155">
+<img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/img/plasticbag.png" alt="alt text" width="200" height="155">  |  <img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/Result/result_plasticbag.png" alt="alt text" width="200" height="155">
+<img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/img/troll.png" alt="alt text" width="200" height="155">  |  <img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/Result/result_troll.png" alt="alt text" width="200" height="155">
+
+
 Average time taken to compute the different flows is 40s, but solving of linear equations using preconditioned conjugate gradient method takes another 2-3 min, which can be lessened by allowing lesser iterations.
