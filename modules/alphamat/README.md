@@ -43,6 +43,12 @@ Input Image             | Ouput Alpha matte
 
 Average time taken to compute the different flows is 40s, but solving of linear equations using preconditioned conjugate gradient method takes another 2-3 min, which can be lessened by allowing lesser iterations.
 
+## TO DO
+
+* Results need to be improved by extensively comparing each flow's matrix with yaksoy MATLAB implementation [4]. 
+* Runtime needs improvement. 
+* Third part library(Eigen, nanoflann) dependencies can be removed.
+
 ## References
 
 [1] Yagiz Aksoy, Tunc Ozan Aydin, Marc Pollefeys, "Designing Effective Inter-Pixel Information Flow for Natural Image Matting", CVPR, 2017. [[link](http://people.inf.ethz.ch/aksoyy/ifm/)]
@@ -50,3 +56,5 @@ Average time taken to compute the different flows is 40s, but solving of linear 
 [2] Roweis, Sam T., and Lawrence K. Saul. "Nonlinear dimensionality reduction by locally linear embedding." science 290.5500 (2000): 2323-2326.[[link](https://science.sciencemag.org/content/290/5500/2323)]
 
 [3] Ehsan Shahrian, Deepu Rajan, Brian Price, Scott Cohen, "Improving Image Matting using Comprehensive Sampling Sets", CVPR 2013 [[paper](http://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Shahrian_Improving_Image_Matting_2013_CVPR_paper.pdf)]
+
+[4] Affinity Based Matting Toolbox by Yagiz Aksoy[[link]https://github.com/yaksoy/AffinityBasedMattingToolbox]
