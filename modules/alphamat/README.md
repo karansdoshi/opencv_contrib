@@ -1,5 +1,5 @@
 ## Designing Effective Inter-Pixel Information Flow for Natural Image Matting:
-Alphamatting is the problem of extracting the foreground from an image. Given the input of image and its corresponding, we try to extract the foreground from the background. Following is an example - 
+Alphamatting is the problem of extracting the foreground from an image. Given the input of image and its corresponding trimap, we try to extract the foreground from the background. Following is an example - 
 
 Input Image                | Input trimap              | Ouput Alpha matte  
 :-------------------------:|:-------------------------:|:-------------------------:
