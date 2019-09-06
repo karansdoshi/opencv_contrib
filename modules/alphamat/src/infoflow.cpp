@@ -2,48 +2,13 @@
 // It is subject to the license terms in the LICENSE file found in the top-level directory
 // of this distribution and at http://opencv.org/license.html.
 
-const int dim = 5;  // dimension of feature vectors
 #include "precomp.hpp"
+#include "opencv2/infoflow.hpp"
 
-using namespace std;
-using namespace cv;
+namespace cv{
+namespace alphamat{
 
-void show(Mat& image){
-    namedWindow( "Display window", WINDOW_AUTOSIZE );    // Create a window for display.
-    imshow( "Display window", image );                   // Show our image inside it.
-    waitKey(0);                                          // Wait for a keystroke in the window
-}
-
-int check_image(Mat& image){
-    if ( !image.data )                              // Check for invalid input
-    {
-        cout <<  "Could not open or find the image" << endl;
-        return -1;
-    }
-    return 0;
-}
-
-void type2str(int type) {
-  string r;
-
-  uchar depth = type & CV_MAT_DEPTH_MASK;
-  uchar chans = 1 + (type >> CV_CN_SHIFT);
-
-  switch ( depth ) {
-    case CV_8U:  r = "8U"; break;
-    case CV_8S:  r = "8S"; break;
-    case CV_16U: r = "16U"; break;
-    case CV_16S: r = "16S"; break;
-    case CV_32S: r = "32S"; break;
-    case CV_32F: r = "32F"; break;
-    case CV_64F: r = "64F"; break;
-    default:     r = "User"; break;
-  }
-
-  r += "C";
-  r += (chans+'0');
-  cout << r << endl;
-}
+// const int dim = 5;  // dimension of feature vectors
 
 void solve(SparseMatrix<double> Wcm,SparseMatrix<double> Wuu,SparseMatrix<double> Wl,SparseMatrix<double> Dcm,
     SparseMatrix<double> Duu,SparseMatrix<double> Dl,SparseMatrix<double> H,SparseMatrix<double> T,
@@ -88,9 +53,8 @@ void solve(SparseMatrix<double> Wcm,SparseMatrix<double> Wuu,SparseMatrix<double
             alpha.at<uchar>(i, j) = x(i*nCols+j)*255;
         }
     // show(alpha);
-    cout << "Done" << endl;
+    std::cout << "Done" << std::endl;
 }
-
 
 void infoFlow(Mat& image, Mat& tmap, Mat& result, bool useKU, bool trim){
     clock_t begin = clock();
@@ -101,7 +65,7 @@ void infoFlow(Mat& image, Mat& tmap, Mat& result, bool useKU, bool trim){
     Mat ak, wf;
     SparseMatrix<double> T(N, N);
     typedef Triplet<double> Tr;
-    vector<Tr> triplets;
+    std::vector<Tr> triplets;
     // triplets.reserve(N*N);
 
     ak.create(1, nRows*nCols, CV_8U);
@@ -138,7 +102,7 @@ void infoFlow(Mat& image, Mat& tmap, Mat& result, bool useKU, bool trim){
 
     clock_t end = clock();
     double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
-    cout << "time for flow calc: " << elapsed_secs << endl;
+    std::cout << "time for flow calc: " << elapsed_secs << std::endl;
 
     T.setFromTriplets(triplets.begin(), triplets.end());
     // Mat calc_alpha = solve(Wcm,Wuu,Wl,Dcm,Duu,Dl,H,T,ak,wf,true);
@@ -148,7 +112,7 @@ void infoFlow(Mat& image, Mat& tmap, Mat& result, bool useKU, bool trim){
     solve(Wcm, Wuu, Wl, Dcm, Duu, Dl, H, T, ak, wf, useKU, alpha);
 
     Mat trim_alpha = alpha.clone();
-    cout << "Solved" << endl;
+    std::cout << "Solved" << std::endl;
 
     int i, j;
     for (i = 0; i < image.rows; i++){
@@ -171,8 +135,9 @@ void infoFlow(Mat& image, Mat& tmap, Mat& result, bool useKU, bool trim){
 
     // cout<<"Trimmed"<<endl;
     // char* res_path = argv[3];
+
+
     result = trim_alpha;
-    imwrite("result.png", trim_alpha);
     // imwrite(res_path, trim_alpha);
 
     /*
@@ -180,27 +145,36 @@ void infoFlow(Mat& image, Mat& tmap, Mat& result, bool useKU, bool trim){
     elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
     cout<<"total time: "<<elapsed_secs<<endl;
     */
+
+
+
+
 }
+}} // namespace ccalib, cv
 
 
+/*
+#include "opencv2/highgui.hpp"
 int main(int argc, char** argv){
     Mat image, tmap;
     // const char* img_path = "../../data/input_lowres/elephant.png";
     char* img_path = argv[1];
     // cout<<img_path<<endl;
-    image = imread(img_path, CV_LOAD_IMAGE_COLOR);   // Read the file
+    image = cv::imread(img_path, cv::CV_LOAD_IMAGE_COLOR);   // Read the file
 
-    check_image(image);
+    // check_image(image);
     // show(image);
     // cout<<image.size<<endl;
     // cout<<image.channels()<<endl;
 
     // const char* tmap_path = "../../data/trimap_lowres/Trimap1/elephant.png";
     char* tmap_path = argv[2];
-    tmap = imread(tmap_path, CV_LOAD_IMAGE_GRAYSCALE);
-    check_image(tmap);
+    tmap = cv::imread(tmap_path, cv::CV_LOAD_IMAGE_GRAYSCALE);
+    // check_image(tmap);
     // show(tmap);
     Mat result;
-    infoFlow(image, tmap, result, false, true);
+    cv::alphamat::infoFlow(image, tmap, result, false, true);
+    imwrite("result1.png", result);
     return 0;
 }
+*/
