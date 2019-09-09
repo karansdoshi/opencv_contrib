@@ -4,7 +4,8 @@ Alphamatting is the problem of extracting the foreground from an image. Given th
 
 Input Image                | Input trimap              | Ouput Alpha matte
 :-------------------------:|:-------------------------:|:-------------------------:
-<img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/img/net.png" alt="alt text" width="300" height="200"> | <img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/trimap/net.png" alt="alt text" width="300" height="200"> | <img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/Result/result_net.png" alt="alt text" width="300" height="200">
+<img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/tutorials/information_flow_matting/images/net_input_image.png" alt="alt text" width="300" height="200"> | <img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/tutorials/information_flow_matting/images/net_trimap.png" alt="alt text" width="300" height="200"> | <img src="https://github.com/muskaankularia/opencv_contrib/blob/alphamatting/modules/alphamat/tutorials/information_flow_matting/images/net_result.png" alt="alt text" width="300" height="200">
+
 
 This project is implementation of Information-Flow Matting [Yağız Aksoy, Tunç Ozan Aydın, Marc Pollefeys] [1]. It required implementation of some parts of other papers [2,3].
 
