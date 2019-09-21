@@ -153,8 +153,12 @@ void lle(my_vector_of_vectors_t& indm, my_vector_of_vectors_t& samples, float ep
 			C.at<float>(p,p) += eps;
 
 		ptDotN = Z.t() * pt;
-	    solve(C, ptDotN, imd1, DECOMP_CHOLESKY);
+	    // cout<<C.size()<<" "<<ptDotN.size()<<" "<<imd.size()<<endl;
+	    // cout<<C<<"\n\n"<<ptDotN<<"\n\n"<<imd;
+	    solve(C, Cones, imd, DECOMP_CHOLESKY);
+	    exit(0);
 	    alpha = 1 - cv::sum(imd)[0];
+
 	    solve(C, Cones, Cinv, DECOMP_CHOLESKY);
 	    beta = cv::sum(Cinv)[0]; //% sum of elements of inv(corr)
 	    lagrangeMult = alpha / beta;
